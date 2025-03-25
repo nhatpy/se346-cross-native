@@ -6,3 +6,11 @@ export interface Course {
   room: string;
   lecturer: string;
 }
+
+export interface Employee {
+  id: string;
+  employee_name: string;
+  employee_age: number;
+  employee_salary: number;
+  profile_image: string;
+}
