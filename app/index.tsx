@@ -12,7 +12,7 @@ export default function LoginScreen() {
   const handleLogin = () => {
     if (username === "User1" && password === "123456") {
       setMessage("");
-      router.push("/(employee)");
+      router.push("/(todo)");
     } else setMessage("Invalid username or password");
   };
 

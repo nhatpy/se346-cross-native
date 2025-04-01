@@ -14,3 +14,9 @@ export interface Employee {
   employee_salary: number;
   profile_image: string;
 }
+
+export interface Todo {
+  id: number;
+  text: string;
+  completed: boolean;
+}

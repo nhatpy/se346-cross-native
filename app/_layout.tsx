@@ -37,6 +37,7 @@ export default function RootLayout() {
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(course)" options={{ headerShown: false }} />
         <Stack.Screen name="(employee)" options={{ headerShown: false }} />
+        <Stack.Screen name="(todo)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
