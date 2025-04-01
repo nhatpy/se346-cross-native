@@ -1,6 +1,7 @@
 import { Text, TextInput, Button, SafeAreaView } from "react-native";
 import React, { useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useRouter } from "expo-router";
 
 export interface Todo {
   id: number;
@@ -10,6 +11,7 @@ export interface Todo {
 
 const CreateTodoScreen = () => {
   const [newTodo, setNewTodo] = useState("");
+  const router = useRouter();
 
   const addTodo = async () => {
     if (newTodo.trim()) {
@@ -24,6 +26,7 @@ const CreateTodoScreen = () => {
         todos.push(newEntry);
         await AsyncStorage.setItem("todos", JSON.stringify(todos));
         setNewTodo("");
+        router.push("/(todo)");
         console.log("Todo added successfully");
       } catch (error) {
         console.error("Error saving todo:", error);
